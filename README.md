@@ -43,6 +43,9 @@ npm run filter-sort
 # run all cases
 npm run test
 
+# run wishlist
+npm run wishlist
+
 ```
 
 ## Reporter
