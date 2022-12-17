@@ -1,0 +1,32 @@
+{
+  "name": "bootcamp-project",
+  "version": "2.0.0",
+  "description": "UI Automation Project (again)",
+  "main": "index.js",
+  "scripts": {
+    "wishlist": "npx wdio run wdio.conf.js --spec ./test/specs/wishlist/*",
+    "authentication": "npx wdio run wdio.conf.js --spec ./test/specs/authentication/*",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OThomps/bootcamp-project.git"
+  },
+  "author": "Owen Thompson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OThomps/bootcamp-project/issues"
+  },
+  "homepage": "https://github.com/OThomps/bootcamp-project#readme",
+  "dependencies": {
+    "webdriverio": "^8.0.13"
+  },
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.0.13",
+    "@wdio/cli": "^8.0.13",
+    "@wdio/local-runner": "^8.0.13",
+    "@wdio/mocha-framework": "^8.0.13",
+    "@wdio/selenium-standalone-service": "^8.0.13",
+    "@wdio/spec-reporter": "^8.0.13"
+  }
+}
