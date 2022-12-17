@@ -23,10 +23,13 @@ class LoginPage extends Page {
         return $('#signInOrRegister');
     }
 
+<<<<<<< HEAD
     get errors() {
         return $('.auth0-lock-error-invalid-hint');
     }
 
+=======
+>>>>>>> wishlist
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
