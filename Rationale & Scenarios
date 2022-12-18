@@ -1,0 +1,70 @@
+Automation Project
+
+
+Test Scenarios
+
+a. `authentication`
+Verify users can log in with valid credentials
+Verify a user cannot login without a password (excluding google login)
+Verify a user cannot login without an email (excluding google login)
+Verify a user cannot sign up without entering an email address (excluding google sign up)
+Verify a user cannot sign up using a password that doesn’t meet the requirements addto(excluding google sign up)
+Verify a user can sign up with valid credentials
+Verify a user can reset their password
+b. `add-to-cart`
+Verify a user can add a single item to cart
+Verify a user can add multiple items to cart
+Verify that the max quantity of an item that can be added at once is 20
+Verify that minimum quantity of an item that can be added is 1
+Verify that a user can increase the quantity of an item to be added (using icon)
+c. `cart`
+Verify that the cart shows the correct total of all items added
+Verify that a user can delete an item from the cart
+Verify that a user can adjust the quantity of an item in the cart
+Verify that bag icon correctly reflects the count of items in the cart
+Verify that the user can return to the products page with the ‘continue shopping’ link
+d. `product-gallery-home-page`
+Verify that the youtube video plays when triggered
+Verify that the youtube video can be paused
+Verify that each product has a price
+Verify that each product has a category label
+Verify that each product has a name
+e. `product-details`
+Verify that the product has a description displayed
+Verify that the item can be added to cart
+Verify that the user is able to cycle through the product images
+Verify that the product title is displayed
+Verify that the item price is still displayed
+Verify that the quantity can be increased
+f. `checkout`
+Verify that a user cannot go to payment with missing required fields
+Verify that the email field requires a valid email address
+Verify that the user can complete billing form
+Verify that a user can edit cart during checkout
+Verify that a user sees the total price to be paid
+g. `filter-and-sort`
+Verify that a user can sort by price low to high
+Verify that a user can sort by price high to low
+Verify that user can sort by name A to Z
+Verify that user can sort by name Z to A
+Verify that the user can filter products by each category
+Verify that the reset button clears any filter and sorting
+h. `search`
+Verify that the search filters by matching text
+Verify that the reset button clears the search field
+Verify that a user cannot search by price/number
+Verify that the search is case insensitive
+Verify that valid + invalid text search yield no results
+
+i. `contact`
+Verify that a user can submit a contact form
+Verify that a user cannot enter an invalid email address
+Verify that a user cannot submit an incomplete form
+Verify that the user is informed that the message was sent
+Verify that the twitter link opens the related twitter page
+
+
+Rationale
+
+The reason for selecting the test cases above is primarily because they encompass all the typical user flows and actions a user may take when navigating through the website. From login/sign up, browsing products and filtering by price and type, viewing product details and images to the checkout process. They also cover key functionality that the business needs working in order to maintain usability and keep customers pleased enough to keep using the site. These cases encompass the main areas necessary for the website to be functioning effectively.
+

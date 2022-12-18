@@ -3,28 +3,28 @@ const Page = require('./page');
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class LoginPage extends Page {
+class CartPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get emailField() {
-        return $('input[name="email"]');
+    get incrementQuantity() {
+        return $('button[title="Increment quantity"]');
     }
 
-    get passwordField() {
-        return $('input[name="password"]');
+    get quantity() {
+        return $('.snipcart-item-quantity__quantity');
     }
 
-    get btnSubmit() {
-        return $('.auth0-label-submit');
+    get bagIcon() {
+        return $('.snipcart-cart-header__option');
     }
 
-    get authBtn() {
-        return $('#signInOrRegister');
+    get deleteBtn() {
+        return $('button[title="Remove item"]');
     }
 
-    get errors() {
-        return $('.auth0-lock-error-invalid-hint');
+    get fitted() {
+        return $('button[data-item-name="Quality Fitted Hat"]');
     }
 
     /**
@@ -43,8 +43,8 @@ class LoginPage extends Page {
      * overwrite specific options to adapt it to page object
      */
     open() {
-        return super.open('/');
+        return super.open('products#/cart/');
     }
 }
 
-module.exports = new LoginPage();
+module.exports = new CartPage();

@@ -133,5 +133,4 @@ module.exports =
             price: "680",
             label: "laptop"
         },
-
     ];

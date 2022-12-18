@@ -7,6 +7,8 @@ module.exports =
     authEmailBlank: "Email can't be blank",
     authPasswordBlank: "Password can't be blank",
     authEmailInvalid: "Email is invalid",
-
-
+    billingRequired: "This field is required",
+    billingInvalid: "Please provide a valid email address",
+    contactReq: "Field is required!",
+    contactInval: "Email is invalid"
 };

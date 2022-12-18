@@ -1,4 +1,3 @@
-const { $ } = require('webdriverio/build/commands/browser');
 const Page = require('./page');
 
 /**
@@ -28,14 +27,6 @@ class AddToCart extends Page {
         return $('button[data-item-name="Quality Fitted Hat"]');
     }
 
-    get addTruckerHat() {
-        return $('button[data-item-name="Quality Trucker Hat"]');
-    }
-
-    get addMousepad() {
-        return $('button[data-item-name="Quality Mousepad"]');
-    }
-
     get allCartItems() {
         return $$('li[class="snipcart-item-line snipcart-item-line--cart-edit"]');
     }
@@ -44,31 +35,30 @@ class AddToCart extends Page {
         return $('svg[title="Remove item"]');
     }
 
+    get cartItemQuantity() {
+        return $('.snipcart-item-quantity__quantity');
+    }
+
+    get prodIconIncrease() {
+        return $('#product-0-increase');
+    }
+
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
     async addSingle() {
         //bring button into view and click
+        await this.addCartBtn.waitForDisplayed(5000);
         await this.addCartBtn.scrollIntoView();
         await this.addCartBtn.click();
     }
 
-    async addMulti() {
-        //adding an item triggers cart summary to pop out, so close after first two items are added
-        await this.addFittedHat.scrollIntoView();
-        await this.addFittedHat.click();
-        await this.closeCartSummary.click();
-        await this.addTruckerHat.click();
-        await this.closeCartSummary.click();
-        await this.addMousepad.click();
-    }
-
     async addSurplus() {
         //clearValue doesn't seem to work so send backspace to clear input field
-        await this.quantityInput.scrollIntoView();
+        await this.quantityInput.scrollIntoView({ block: 'center', inline: 'center' });
         await this.quantityInput.click();
-        await this.quantityInput.sendKeys('\b');
+        await browser.keys('\b');
         await this.quantityInput.setValue(50);
         await this.addCartBtn.click();
     }
@@ -77,7 +67,7 @@ class AddToCart extends Page {
      * overwrite specific options to adapt it to page object
      */
     open() {
-        return super.open('/');
+        return super.open('products/');
     }
 }
 

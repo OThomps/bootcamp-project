@@ -6,6 +6,14 @@
   "scripts": {
     "wishlist": "npx wdio run wdio.conf.js --spec ./test/specs/wishlist/*",
     "authentication": "npx wdio run wdio.conf.js --spec ./test/specs/authentication/*",
+    "addToCart": "npx wdio run wdio.conf.js --spec ./test/specs/addToCart/addSingle.e2e.js",
+    "cart": "npx wdio run wdio.conf.js --spec ./test/specs/cart/*",
+    "product-gallery": "npx wdio run wdio.conf.js --spec ./test/specs/product-gallery/*",
+    "product-details": "npx wdio run wdio.conf.js --spec ./test/specs/product-details/*",
+    "checkout": "npx wdio run wdio.conf.js --spec ./test/specs/checkout/*",
+    "filter-sort": "npx wdio run wdio.conf.js --spec ./test/specs/filter-sort/*",
+    "search": "npx wdio run wdio.conf.js --spec ./test/specs/search/*",
+    "contact": "npx wdio run wdio.conf.js --spec ./test/specs/contact/*",
     "wdio": "wdio run ./wdio.conf.js"
   },
   "repository": {

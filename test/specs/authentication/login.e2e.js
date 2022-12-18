@@ -5,7 +5,7 @@ const TextData = require('../../data/textData')
 describe('Login Validations', () => {
     //data driven login covering invalid logins and valid login
 
-    it('should attempt to login using data store', async () => {
+    it('should attempt to login using data stored', async () => {
         for (const record of LoginData) {
             await LoginPage.open(); //opening the page
             //attempt to login
